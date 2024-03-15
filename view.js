@@ -1,5 +1,16 @@
 // ---- Define your dialogs  and panels here ----
 
+var Panel_effective_permissions = define_new_effective_permissions('effective_permissions', true);
+    $('#sidepanel').append(Panel_effective_permissions);
+
+var User_select_field = define_new_user_select_field('user_select', 'Select User', function(selected_user){
+
+    $('#effective_permissions').attr('username', selected_user);
+    $('#effective_permissions').attr('filepath', '/C/presentation_documents/important_file.txt');
+    
+    });
+    $('#sidepanel').append(User_select_field);
+
 
 
 // ---- Display file structure ----
